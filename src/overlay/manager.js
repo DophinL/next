@@ -1,3 +1,4 @@
+// 页面上有可能有多个overlay，用于集中管理，不过目前作用主要是isCurrentOverlay
 const overlayManager = {
     allOverlays: [],
 

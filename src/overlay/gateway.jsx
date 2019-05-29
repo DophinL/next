@@ -6,6 +6,7 @@ import findNode from './utils/find-node';
 
 const { makeChain } = func;
 
+// 主要做的事情就是createPortal，创建children（包括浮层、mask）和container node的关联
 export default class Gateway extends Component {
     static propTypes = {
         children: PropTypes.node,
@@ -28,6 +29,7 @@ export default class Gateway extends Component {
 
     getContainerNode(props) {
         const targetNode = findNode(props.target);
+        // 当container是函数时，targetNode会作为参数传给他
         return findNode(props.container, targetNode);
     }
 
