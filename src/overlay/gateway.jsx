@@ -29,7 +29,7 @@ export default class Gateway extends Component {
 
     getContainerNode(props) {
         const targetNode = findNode(props.target);
-        // 当container是函数时，targetNode会作为参数传给他
+        // 当container是函数时，targetNode会作为参数传给他,其它地方并没有用到targetNode
         return findNode(props.container, targetNode);
     }
 
